@@ -21,7 +21,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
     "@mapbox/rehype-prism": "^0.8.0",
+    "@mui/icons-material": "^5.5.1",
+    "@mui/material": "^5.5.2",
+    "@mui/styled-engine-sc": "^5.5.2",
     "@tailwindcss/typography": "^0.5.0",
     "classnames": "^2.3.1",
     "gray-matter": "^4.0.2",
@@ -30,14 +35,17 @@
     "next-remote-watch": "1.0.0",
     "prismjs": "^1.25.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
+    "@types/node": "^17.0.23",
     "autoprefixer": "^10.4.0",
     "eslint": "<8.0.0",
     "eslint-config-next": "12.0.10",
     "eslint-config-prettier": "^8.3.0",
     "postcss": "^8.4.4",
-    "tailwindcss": "^3.0.0"
+    "tailwindcss": "^3.0.0",
+    "typescript": "^4.6.3"
   }
 }
