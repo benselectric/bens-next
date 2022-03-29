@@ -74,6 +74,7 @@ const MyApp = ({
    </Toolbar>
   </AppBar>
   <Container
+   maxWidth={false}
    style={{
      background: '#35ABA8',
      color: 'white',

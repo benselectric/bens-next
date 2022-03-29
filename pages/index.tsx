@@ -456,6 +456,7 @@ export default function Index () {
        justifyContent: 'center',
        alignItems: 'center',
        display: 'flex',
+       maxWidth: '100%',
        flexDirection: {
          xs: 'column',
          md: 'row'
@@ -471,7 +472,7 @@ export default function Index () {
         height: '86px',
         fontWeight: 'bold',
         fontSize: '26px',
-
+        maxWidth: '80%',
         textTransform: 'capitalize'
       }}
      >
@@ -486,6 +487,7 @@ export default function Index () {
         height: '86px',
         fontWeight: 'bold',
         fontSize: '26px',
+        maxWidth: '80%',
         textTransform: 'capitalize'
       }}
       sx={{
