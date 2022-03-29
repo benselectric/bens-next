@@ -1,120 +1,12 @@
 import { getPosts } from '../utils/mdx-utils'
-import Header from '../components/Header'
-import { getGlobalData } from '../utils/global-data'
-import SEO from '../components/SEO'
-import {
-  AppBar,
-  Box,
-  Button,
-  Container,
-  Grid,
-  IconButton,
-  Toolbar,
-  Typography
-} from '@mui/material'
 
-export default function Index ({ posts, globalData }) {
+import { Box, Button, Container, Grid, Typography } from '@mui/material'
+import { Splide, SplideSlide } from '@splidejs/react-splide'
+import '@splidejs/splide/dist/css/themes/splide-default.min.css'
+
+export default function Index () {
   return (
   <div>
-   <AppBar
-    position="static"
-    color="transparent"
-    style={{
-      height: '90px'
-    }}
-   >
-    <Toolbar
-     style={{
-       height: '90px'
-     }}
-    >
-     <img src="/logo.png" alt="logo" style={{ width: '200px' }} />
-
-     <IconButton
-      size="large"
-      edge="start"
-      color="inherit"
-      aria-label="menu"
-      sx={{ mr: 2 }}
-     />
-     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} />
-     <Button variant="contained" color="primary">
-      Donativos para Fundación BENS Electric
-     </Button>
-    </Toolbar>
-   </AppBar>
-   <Container
-    style={{
-      background: '#35ABA8',
-      height: '70px',
-      color: 'white'
-    }}
-    sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}
-   >
-    <Typography
-     sx={{ minWidth: 100 }}
-     height="100%"
-     style={{
-       background: '#005FAB',
-       alignItems: 'center',
-       display: 'flex',
-       justifyContent: 'center'
-     }}
-    >
-     Inicio
-    </Typography>
-    <Typography
-     height="100%"
-     style={{
-       alignItems: 'center',
-       display: 'flex',
-       justifyContent: 'center'
-     }}
-     sx={{ minWidth: 100 }}
-    >
-     Conoce
-     <br />
-     BENS
-    </Typography>
-    <Typography
-     height="100%"
-     style={{
-       alignItems: 'center',
-       display: 'flex',
-       justifyContent: 'center'
-     }}
-     sx={{ minWidth: 100 }}
-    >
-     Servicios
-     <br />
-     BENS
-    </Typography>
-    <Typography
-     height="100%"
-     style={{
-       alignItems: 'center',
-       display: 'flex',
-       justifyContent: 'center'
-     }}
-     sx={{ minWidth: 100 }}
-    >
-     Proyectos
-     <br />
-     BENS
-    </Typography>
-    <Typography
-     height="100%"
-     style={{
-       alignItems: 'center',
-       display: 'flex',
-       justifyContent: 'center'
-     }}
-     sx={{ minWidth: 100 }}
-    >
-     Contáctanos
-    </Typography>
-   </Container>
-
    <Box>
     <img src="/images/electrical.png" alt="banner" style={{ width: '100%' }} />
    </Box>
@@ -612,21 +504,53 @@ export default function Index ({ posts, globalData }) {
      Algunos de nuestros clientes
     </Typography>
    </Box>
+   <Container>
+    <Splide
+     options={{
+       type: 'loop',
 
-   <SEO title={globalData.name} description={globalData.blogTitle} />
-   <Header name={globalData.name} />
-   <main className="w-full">
-    <h1 className="text-3xl lg:text-5xl text-center mb-12">
-     {globalData.blogTitle}
-    </h1>
-   </main>
+       perPage: 3,
+       rewind: true
+     }}
+    >
+     <SplideSlide>
+      <img
+       src="images/wilson.png"
+       alt="Image 1"
+       style={{
+         padding: '10px'
+       }}
+      />
+     </SplideSlide>
+     <SplideSlide>
+      <img
+       src="images/azor.png"
+       alt="Image 2"
+       style={{
+         padding: '10px'
+       }}
+      />
+     </SplideSlide>
+     <SplideSlide>
+      <img
+       src="images/cibanco.png"
+       alt="Image 2"
+       style={{
+         padding: '10px'
+       }}
+      />
+     </SplideSlide>
+     <SplideSlide>
+      <img
+       src="images/officemax.png"
+       alt="Image 2"
+       style={{
+         padding: '10px'
+       }}
+      />
+     </SplideSlide>
+    </Splide>
+   </Container>
   </div>
   )
-}
-
-export const getStaticProps = () => {
-  const posts = getPosts()
-  const globalData = getGlobalData()
-
-  return { props: { posts, globalData } }
 }
