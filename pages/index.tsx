@@ -450,7 +450,18 @@ export default function Index () {
      <br /> la mejor calidad y un equipo de especialistas
     </Typography>
 
-    <Box flexDirection="row">
+    <Box
+     flexDirection="row"
+     sx={{
+       justifyContent: 'center',
+       alignItems: 'center',
+       display: 'flex',
+       flexDirection: {
+         xs: 'column',
+         md: 'row'
+       }
+     }}
+    >
      <Button
       variant="contained"
       style={{
@@ -460,7 +471,7 @@ export default function Index () {
         height: '86px',
         fontWeight: 'bold',
         fontSize: '26px',
-        margin: '43px',
+
         textTransform: 'capitalize'
       }}
      >
@@ -475,8 +486,13 @@ export default function Index () {
         height: '86px',
         fontWeight: 'bold',
         fontSize: '26px',
-        margin: '43px',
         textTransform: 'capitalize'
+      }}
+      sx={{
+        margin: {
+          xs: '10px',
+          md: '43px'
+        }
       }}
      >
       Productos

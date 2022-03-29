@@ -11,7 +11,7 @@ import {
   Toolbar,
   Typography
 } from '@mui/material'
-
+import SEO from '../components/SEO'
 const theme = createTheme({
   palette: {
     primary: {
@@ -33,6 +33,7 @@ const MyApp = ({
  pageProps: any
 }) => (
  <ThemeProvider theme={theme}>
+  <SEO title="Bens" description="electrical-service" />
   <AppBar
    position="static"
    color="transparent"
@@ -73,14 +74,12 @@ const MyApp = ({
    </Toolbar>
   </AppBar>
   <Container
-   disableGutters
-   maxWidth={false}
    style={{
      background: '#35ABA8',
-     height: '70px',
      color: 'white',
      cursor: 'pointer',
-     padding: '0px 5%'
+     padding: '0px 5%',
+     flexWrap: 'wrap'
    }}
    sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}
   >
@@ -91,7 +90,8 @@ const MyApp = ({
       background: '#005FAB',
       alignItems: 'center',
       display: 'flex',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      height: '70px'
     }}
    >
     Inicio
@@ -101,7 +101,8 @@ const MyApp = ({
     style={{
       alignItems: 'center',
       display: 'flex',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      height: '70px'
     }}
     sx={{ minWidth: 100 }}
    >
@@ -114,7 +115,8 @@ const MyApp = ({
     style={{
       alignItems: 'center',
       display: 'flex',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      height: '70px'
     }}
     sx={{ minWidth: 100 }}
    >
@@ -127,7 +129,8 @@ const MyApp = ({
     style={{
       alignItems: 'center',
       display: 'flex',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      height: '70px'
     }}
     sx={{ minWidth: 100 }}
    >
@@ -140,7 +143,8 @@ const MyApp = ({
     style={{
       alignItems: 'center',
       display: 'flex',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      height: '70px'
     }}
     sx={{ minWidth: 100 }}
    >
