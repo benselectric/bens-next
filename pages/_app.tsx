@@ -25,7 +25,13 @@ const theme = createTheme({
     borderRadius: 40
   }
 })
-const MyApp = ({ Component, pageProps }) => (
+const MyApp = ({
+  Component,
+  pageProps
+}: {
+ Component: any
+ pageProps: any
+}) => (
  <ThemeProvider theme={theme}>
   <AppBar
    position="static"
