@@ -71,10 +71,6 @@ const Presentacion = () => (
       transmisión y distribución de energía.
      </p>
     </Grid>
-    <Grid item xs={12} sm={6} >
-        <img src=""
-      </Grid>
-
    </Grid>
   </Container>
  </div>
